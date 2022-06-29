@@ -1,9 +1,9 @@
 import hashlib
 
 
-# Test passwords
-password_samples = ['advcweqahe', 'cevdfvdgvfv', 'agfevfe4gyd', 'ahgf68weyc',
-                    'dfhhsdgdfgg']
+# Test passwords. the below code opens and read a password text file in this project folder
+with open('nist_10000.txt', newline='') as bad_passwords:
+    password_samples = bad_passwords.read().split('\n')
 
 # This is a sample of data {user:{username, role, md5_hash}} pulled off from a database
 users_table = {
